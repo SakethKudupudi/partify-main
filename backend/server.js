@@ -5,7 +5,12 @@ import 'express-async-errors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-dotenv.config({ path: path.join(__dirname, '../.env.local') });
+
+// Load .env from project root (Docker) or .env.local (development)
+const envPath = process.env.NODE_ENV === 'production' 
+  ? path.join(__dirname, '../.env')
+  : path.join(__dirname, '../.env.local');
+dotenv.config({ path: envPath });
 import { initializeSupabase } from './config/supabase.js';
 import { initializeRedis } from './config/redis.js';
 import { initializeAzure } from './config/azure.js';
