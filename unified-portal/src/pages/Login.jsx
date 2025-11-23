@@ -195,31 +195,7 @@ export default function Login() {
             </button>
           </div>
 
-          {!isSignup && (
-            <div style={{
-              padding: '16px',
-              backgroundColor: '#f0f0f0',
-              borderRadius: '8px',
-              fontSize: '12px',
-              lineHeight: '1.8',
-              color: '#666'
-            }}>
-              <strong style={{ color: '#1d1d1f' }}>Test Accounts:</strong><br/>
-              <br/>
-              <div style={{ marginBottom: '8px' }}>
-                <strong>Admin:</strong><br/>
-                admin@test.com
-              </div>
-              <div style={{ marginBottom: '8px' }}>
-                <strong>Vendor:</strong><br/>
-                vendor@test.com
-              </div>
-              <div>
-                <strong>Customer:</strong><br/>
-                customer@test.com
-              </div>
-            </div>
-          )}
+
         </form>
       </div>
     </div>
